@@ -1,18 +1,23 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
 
-
-import { AppComponent } from './app.component';
-
+import { AppComponent } from "./app.component";
+import { CoreModule } from "./core/core.module";
+// import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from "./app-routing.module";
+import { TaskDetailService } from "./core/task-detail.service";
+import { SharedModule } from "./shared/shared.module";
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
-    BrowserModule
+    BrowserModule,
+    CoreModule,
+    AppRoutingModule,
+    SharedModule,
+   
   ],
-  providers: [],
+  providers: [TaskDetailService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
