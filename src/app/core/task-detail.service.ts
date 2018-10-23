@@ -3,20 +3,22 @@ import { Totdodetail } from "../totdodetail";
 
 @Injectable()
 export class TaskDetailService {
-  public tododDtail: Totdodetail[];
+
+  public tododList: Totdodetail[];
   constructor() {
-    this.tododDtail = [
+    this.tododList = [
       { id: 1, name: "sonal", iscompelte: true },
-      { id: 2, name: "nikul", iscompelte: false },
-      { id: 3, name: "sahu", iscompelte: true },
-      { id: 4, name: "raj", iscompelte: false },
-      { id: 4, name: "nikul", iscompelte: true }
+      { id: 2, name: "priya", iscompelte: false },
+      { id: 3, name: "sonu", iscompelte: true },
+      { id: 4, name: "dipak", iscompelte: false },
+      { id: 4, name: "shailesh", iscompelte: true }
     ];
   }
   /**
    * gettotdoDetail returns the details of the todoList
    */
+  
   public gettodoDetail(): Totdodetail[] {
-    return this.tododDtail;
+    return this.tododList;
   }
 }

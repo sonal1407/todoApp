@@ -8,23 +8,37 @@ import { TaskDetailService } from "../core/task-detail.service";
   styleUrls: ["./compete-task.component.css"]
 })
 export class CompeteTaskComponent implements OnInit {
-  
-  public userData: Totdodetail[];
-  public completetedData = [];
+  /**
+   * list of data which is store in this array
+   */
+  public  todoListData: Totdodetail[];
+
+  /**
+   * list of the completed data which is store in thos array
+   */
+  public completedData = [];
 
   constructor(private taslListService: TaskDetailService) {
     
-    this.userData = [];
+    this. todoListData = [];
   }
 
   ngOnInit() {
-    //  get the all user data
-    this.userData = this.taslListService.gettodoDetail();
-    this.userData.forEach(element => {
+    /**
+     * get all the data from the service and store in the array
+     */
+    this. todoListData = this.taslListService.gettodoDetail();
+    
+    this. todoListData.forEach(element => {
+      /**
+       * display only true or completedData
+       */
       if (element.iscompelte == true) {
-        this.completetedData.push(element);
+        this.completedData.push(element);
       }
-    }); console.log(this.completetedData);
+      console.log(this.completedData);
+      
+    });
     
   }
 }

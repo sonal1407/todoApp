@@ -1,13 +1,13 @@
-<table>
+<table style="border:2px solid">
   <h2>All Task</h2>
   <tr>
     <th>id</th>
     <th>name</th>
-    <th>action</th>
+    <!-- <th>action</th> -->
   </tr>
-  <tr *ngFor="let data of userData;">
+  <tr *ngFor="let data of todoList;">
     <td>{{data.id}}</td>
     <td>{{data.name}}</td>
-    <td>{{data.isComplete}}</td>
+    <!-- <td>{{data.isComplete}}</td> -->
   </tr>
 </table>

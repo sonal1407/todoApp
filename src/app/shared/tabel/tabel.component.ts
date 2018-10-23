@@ -10,7 +10,7 @@ import { Totdodetail } from "../../totdodetail";
 export class TabelComponent implements OnInit {
   
   @Input()
-  public userData: Totdodetail[];
+  public todoList: Totdodetail[];
   
   constructor() {
     
