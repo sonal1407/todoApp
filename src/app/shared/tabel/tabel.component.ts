@@ -8,14 +8,15 @@ import { Totdodetail } from "../../totdodetail";
   styleUrls: ["./tabel.component.css"]
 })
 export class TabelComponent implements OnInit {
+  
   @Input()
-  public listOfTask: Totdodetail[];
-  constructor(private taskDetailService: TaskDetailService) {
-    this.listOfTask = [];
+  public userData: Totdodetail[];
+  
+  constructor() {
+    
   }
 
   ngOnInit() {
-    this.listOfTask = this.taskDetailService.gettodoDetail();
-    console.log(this.listOfTask);
+    
   }
 }
