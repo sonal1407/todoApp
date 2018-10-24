@@ -1,3 +1,6 @@
-.table_outline{
+/* .table_outline{
     border: 2px solid
+} */
+table, tr, td{
+text-align: center;
 }

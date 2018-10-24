@@ -1,3 +1,6 @@
+/**
+ * author:Sonal Prajapati
+ */
 import { Component, OnInit } from "@angular/core";
 import { Totdodetail } from "../totdodetail";
 import { TaskDetailService } from "../core/task-detail.service";
